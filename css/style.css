@@ -34,6 +34,8 @@ body,html{
 .responsive-nav-right ul li a{
     color: #1dc8cd;
 }
+
+
 /*==========================
   start of back-to-top
 ===========================*/
@@ -1146,7 +1148,7 @@ color: #fff!important;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: aqua;
+  /* color: aqua; */
 }
 
 #contact .contact-container .form-contact .box-3{
