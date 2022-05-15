@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Cart - Express Store</title>
+    <title>Product Description - Express Store</title>
 
     <!-- Bootstrap CSS -->
     
@@ -14,57 +13,71 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./lightbox/css/lightbox.min.css">
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
       <!--Main CSS-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style1.css">
 
     <style>
-      /* Dropdown Button */
-.dropbtn {
-  /* background-color: #04AA6D; */
-  /* color: white; */
-  /* padding: 16px; */
-  font-size: 16px;
-  border: none;
+   .item-big {
+    background-color: rgb(0, 255, 157);
+    height: 500px;
 }
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  /* display: inline-block; */
+.item-choices {
+    border: 2px solid #000;
+    border-left: 0px;
+    padding: 7px 30px;
+    box-sizing: border-box;
+    /* border-radius: 5px; */
 }
+@media(max-width: 768px){
+            .item-choices{
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  /* min-width: -160px; */
-  width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+                border: 2px solid #000;
+            }
+            .plr{
+                padding: 30px!important;
+            }
+        }
+.pro ul {
+    list-style-type: none;
+    display: flex;
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: inline-block;
+.options > * {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 4px;
+    margin-right: 5px;
+    text-align: center;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: inline-block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {}
+.bag {
+    border: none;
+    background-color: black;
+    color: white;
+    width: 99%;
+    margin-top: 10px;
+    padding: 8px;
+}
+.pro input[type="radio"] {
+    display: none;
+}
+.select-black > li > input[type="radio"]:checked + label {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+.pro label {
+    width: 100%;
+    height: 100%;
+}
+.size > li {
+    margin-left: 5px;
+    height: 30px;
+}
+.size > li > input[type="radio"]:checked + label {
+    border-bottom: 2px solid;
+}
 
     </style>
 
@@ -99,7 +112,9 @@
   </div>
 <!-- ======================
    Search
-  ======================= -->   
+  ======================= -->
+
+  
 
  <!--=========================
   start of header
@@ -124,16 +139,16 @@
           <div class="row">
               <!-- <div class="logo-nav" id="ch-nav"> -->
                 <div class="col-xs-2 col-md-4"><a href="" id="hide-p">Free Shipping on Orders $50+ Details</a></div>
-               <div class="col-xs-8 col-md-4" style="text-align: center;">
-                <a href="index.html"><img class="exp-logo" src="./img/express-logo.svg" alt=""></a>
-               </div>
-               <div class="col-xs-2 col-md-4">
-                <div class="icons" id="topIcons">
-                  <a id="ic-1" class="log-img1" href=""><img src="./img/img32.PNG" alt=""></a>
-                  <a class="log-img2" href="signup.html"><img src="./img/img33.PNG" alt=""></a>
-                  <a id="ic-3" class="log-img3" href="cart.html"><img src="./img/img34.PNG" alt=""></a>
+                <div class="col-xs-8 col-md-4" style="text-align: center;">
+                 <a href="index.html"><img class="exp-logo" src="./img/express-logo.svg" alt=""></a>
                 </div>
-               </div>
+                <div class="col-xs-2 col-md-4">
+                 <div class="icons" id="topIcons">
+                   <a id="ic-1" class="log-img1" href=""><img src="./img/img32.PNG" alt=""></a>
+                   <a class="log-img2" href="signup.html"><img src="./img/img33.PNG" alt=""></a>
+                   <a id="ic-3" class="log-img3" href="cart.html"><img src="./img/img34.PNG" alt=""></a>
+                 </div>
+                </div>
               <!-- </div> -->
           </div>
           <i id="menuBtn" class="fa fa-bars"></i>
@@ -707,31 +722,6 @@
     <!--=========================
   Menu1
 ===========================---->  
-
-
-
-
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">Navbar</a>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
 <div id="navmenu2">
         <div class="container">
           <div class="row">
@@ -744,96 +734,124 @@
         </div>
 </div>
 
-    <!-- ============ Cart ============ -->
+    <!-- ============ Product Des ============ -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="small-container cart-page">
-                    <table>
-                        <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Subtotal</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="cart-info">
-                                    <img src="./img/img13.webp" alt="">
-                                    <div>
-                                        <p>5 karet Gold</p>
-                                        <small>Price: $202.00</small><br>
-                                        <a href="">Remove</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><input type="number" value="1"></td>
-                            <td>$202.00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="cart-info">
-                                    <img src="./img/img24.webp" alt="">
-                                    <div>
-                                        <p>Water Proof Watch</p>
-                                        <small>Price: $175.00</small><br>
-                                        <a href="">Remove</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><input type="number" value="1"></td>
-                            <td>$175.00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="cart-info">
-                                    <img src="./img/img22.webp" alt="">
-                                    <div>
-                                        <p>Light Green Sweatshirt</p>
-                                        <small>Price: $270.00</small><br>
-                                        <a href="">Remove</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><input type="number" value="1"></td>
-                            <td>$270.00</td>
-                        </tr>
-                    </table>
-                    <div class="t-price">
-                        <table>
-                            <tr>
-                                <td>Subtotal</td>
-                                <td>$647.00</td>
-                            </tr>
-                            <tr>
-                                <td>Tax</td>
-                                <td>$30.00</td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>$677.00</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <a href="checkout.html" class="btn">Checkout</a>
-                                </td>
-                                <td></td>
-                            </tr>
-                        </table>
+      <div class="row mt-5">
+        <div class="row mt-5 pro">
+            <div class="col-sm-12 col-md-11 col-lg-8 mx-auto">
+                <div class="row">
+                    <div class="col-md-6 p-0 plr">
+                        <img src="./img/img2.webp" class="item-big image-fluid w-100">
+                    </div>
+                    <div class="col-md-6 p-0 plr">
+                        <div class="item-choices">
+                            <div class="mt-1">
+                                <h4 style="text-decoration: underline;">Limited Addition Slim Apricot Herringbone Wool Blend Elastic Waistband Modern Tech Suit Pant</h4>
+                            </div>
+                            <div class="mt-0">
+                                <h4>$340.00</h4>
+                            </div>
+                            <div class="mt-1">
+                                <span><b>New</b></span>
+                            </div>
+                            <h4>Color:</h4>
+                            <ul class="container-fluid options select-black">
+                                <li value="26">
+                                    <input type="radio" name="waist-size" id="i11">
+                                    <label style="background-color: #dc5378;" for="i11"></label>
+                                </li>
+                                <li value="29">
+                                    <input type="radio" name="waist-size" id="i12">
+                                    <label style="background-color: #ec640f;" for="i12"></label>
+                                </li>
+                                <li value="30">
+                                    <input type="radio" name="waist-size" id="i13">
+                                    <label style="background-color: #42847c;" for="i13"></label>
+                                </li>
+                                <li value="31">
+                                    <input type="radio" name="waist-size" id="i14">
+                                    <label style="background-color: #dc5353;" for="i14"></label>
+                                </li>
+                            </ul>
+                            <h4 class="mt-3">Select Waist:</h4>
+                            <ul class="container-fluid options select-black">
+                                <li value="26">
+                                    <input type="radio" name="waist-size" id="i1">
+                                    <label for="i1">26</label>
+                                </li>
+                                <li value="29">
+                                    <input type="radio" name="waist-size" id="i2">
+                                    <label for="i2">29</label>
+                                </li>
+                                <li value="30">
+                                    <input type="radio" name="waist-size" id="i3">
+                                    <label for="i3">30</label>
+                                </li>
+                                <li value="31">
+                                    <input type="radio" name="waist-size" id="i4">
+                                    <label for="i4">31</label>
+                                </li>
+                                <li value="32">
+                                    <input type="radio" name="waist-size" id="i5">
+                                    <label for="i5">32</label>
+                                </li>
+                                <li value="33">
+                                    <input type="radio" name="waist-size" id="i6">
+                                    <label for="i6">33</label>
+                                </li>
+                                <li value="34">
+                                    <input type="radio" name="waist-size" id="i7">
+                                    <label for="i7">34</label>
+                                </li>
+                                <li value="36">
+                                    <input type="radio" name="waist-size" id="i8">
+                                    <label for="i8">36</label>
+                                </li>
+                            </ul>
+                            <h4 class="mt-4">Select Length:</h4>
+                            <ul class="container-fluid options select-black">
+                                <li value="26">
+                                    <input type="radio" name="length" id="l1" value="30">
+                                    <label for="l1">30</label>
+                                </li>
+                                <li value="29">
+                                    <input type="radio" name="length" id="l2" value="32">
+                                    <label for="l2">32</label>
+                                </li>
+                            </ul>
+                            
+                            <input type="submit" value="ADD TO BAG" class="bag">
+                            <hr>
+                            <ul class="container-fluid size">
+                                <p>Select Size:</p>&nbsp;&nbsp;
+                                <li>
+                                    <input type="radio" name="size" id="s1" value="regular">
+                                    <label for="s1">Regular</label>
+                                </li>&nbsp;&nbsp;
+                                <li>
+                                    <input type="radio" name="size" id="s2" value="long">
+                                    <label for="s2">Long</label>
+                                </li>&nbsp;&nbsp;
+                                <li>
+                                    <input type="radio" name="size" id="s3" value="short">
+                                    <label for="s3">Short</label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </div>
         
-    
-        
-        <!-- ======x====== Cart ======x====== -->
+        <!-- ======x====== Product Des ======x====== -->
         
 
         <hr style="margin-top: 120px;">
-<!--=========================
+ <!--=========================
   Start of Footer
-===========================---->
+===========================---->   
     <section id="footer">
       <div class="container-fluid footer-container">
          <div class="container">
@@ -946,12 +964,6 @@
    <div class="fixed-img"><img src="./img/fed.PNG" alt=""></div>
     
    <script>
-    //  $(document).ready(function(){
-    //   $(h2).hide();
-      //  $('.menuitem1').mouseenter(function(){
-        //  $('.menuitem1').hide();
-      //  });
-    //  });
     var sideNav = document.getElementById("sideNav");
     var menuBtn = document.getElementById("menuBtn");
     var menuClose = document.getElementById("menuClose");
@@ -990,14 +1002,9 @@ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxV
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="./js/owl.carousel.min.js"></script>
-
-<!-- <script src="lightbox/js/lightbox-plus-jquery.min.js"></script> -->
 <script src="js/bootstrap.min.js"></script>
-<!-- <script src="lib/jquery/jquery.min.js"></script> -->
 <script src="lib/easing/easing.min.js"></script>
 <script src="lib/wow/wow.min.js"></script>
     <script src="js/main.js"></script>
-    <!-- <script src="js/jquery.js"></script> -->
 </body>
 </html>

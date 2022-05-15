@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Cart - Express Store</title>
+    <title>Shipping - Express Store</title>
 
     <!-- Bootstrap CSS -->
     
@@ -23,49 +23,21 @@
     <link rel="stylesheet" href="css/style1.css">
 
     <style>
-      /* Dropdown Button */
-.dropbtn {
-  /* background-color: #04AA6D; */
-  /* color: white; */
-  /* padding: 16px; */
-  font-size: 16px;
-  border: none;
+      input {
+    border: none;
+    border-bottom: 2px solid rgb(172, 172, 172);
+    margin-bottom: 30px;
 }
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  /* display: inline-block; */
+.btn {
+    border-radius: 0px;
 }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  /* min-width: -160px; */
-  width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+input:focus-visible {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    outline: none;
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: inline-block;
+.order-summary {
+    border-left: 2px solid rgb(172, 172, 172);
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: inline-block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {}
-
     </style>
 
   </head>
@@ -99,7 +71,9 @@
   </div>
 <!-- ======================
    Search
-  ======================= -->   
+  ======================= -->
+
+  
 
  <!--=========================
   start of header
@@ -124,16 +98,16 @@
           <div class="row">
               <!-- <div class="logo-nav" id="ch-nav"> -->
                 <div class="col-xs-2 col-md-4"><a href="" id="hide-p">Free Shipping on Orders $50+ Details</a></div>
-               <div class="col-xs-8 col-md-4" style="text-align: center;">
-                <a href="index.html"><img class="exp-logo" src="./img/express-logo.svg" alt=""></a>
-               </div>
-               <div class="col-xs-2 col-md-4">
-                <div class="icons" id="topIcons">
-                  <a id="ic-1" class="log-img1" href=""><img src="./img/img32.PNG" alt=""></a>
-                  <a class="log-img2" href="signup.html"><img src="./img/img33.PNG" alt=""></a>
-                  <a id="ic-3" class="log-img3" href="cart.html"><img src="./img/img34.PNG" alt=""></a>
+                <div class="col-xs-8 col-md-4" style="text-align: center;">
+                 <a href="index.html"><img class="exp-logo" src="./img/express-logo.svg" alt=""></a>
                 </div>
-               </div>
+                <div class="col-xs-2 col-md-4">
+                 <div class="icons" id="topIcons">
+                   <a id="ic-1" class="log-img1" href=""><img src="./img/img32.PNG" alt=""></a>
+                   <a class="log-img2" href="signup.html"><img src="./img/img33.PNG" alt=""></a>
+                   <a id="ic-3" class="log-img3" href="cart.html"><img src="./img/img34.PNG" alt=""></a>
+                 </div>
+                </div>
               <!-- </div> -->
           </div>
           <i id="menuBtn" class="fa fa-bars"></i>
@@ -744,96 +718,119 @@
         </div>
 </div>
 
-    <!-- ============ Cart ============ -->
+    <!-- ============ Contact ============ -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="small-container cart-page">
-                    <table>
-                        <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Subtotal</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="cart-info">
-                                    <img src="./img/img13.webp" alt="">
-                                    <div>
-                                        <p>5 karet Gold</p>
-                                        <small>Price: $202.00</small><br>
-                                        <a href="">Remove</a>
+        <div class="row mt-5">
+            <div class="col-sm-8">
+                <h1>Checkout</h1>
+                <hr>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 mb-4">
+                            <b>1. &nbsp;Contact Information</b>
+                            <hr>
+                        </div>
+                        <div class="col-sm-12 mb-4">
+                            <b>2. &nbsp;Shipping and Billing Address</b>
+                            <form action="">
+                                <div class="row mt-5">
+                                    <div class="col-sm-6">
+                                        <input type="text" name="fname" placeholder="First Name *" class="w-100" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="lname" placeholder="Last Name *" class="w-100" required>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="text" name="country" placeholder="Country *" class="w-100" required>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="text" name="street" placeholder="Street Address *" class="w-100" required>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="tel" name="apt" placeholder="Apt #, Floor etc. (Optional) *" class="w-100">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="tel" name="postal" placeholder="Postal Code *" class="w-100" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="tel" name="phone" placeholder="City *" class="w-100" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="tel" name="state" placeholder="State/Province *" class="w-100" required>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <a href="payment.html" type="submit" value="" class="btn btn-dark">Continue</a>
                                     </div>
                                 </div>
-                            </td>
-                            <td><input type="number" value="1"></td>
-                            <td>$202.00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="cart-info">
-                                    <img src="./img/img24.webp" alt="">
-                                    <div>
-                                        <p>Water Proof Watch</p>
-                                        <small>Price: $175.00</small><br>
-                                        <a href="">Remove</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><input type="number" value="1"></td>
-                            <td>$175.00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="cart-info">
-                                    <img src="./img/img22.webp" alt="">
-                                    <div>
-                                        <p>Light Green Sweatshirt</p>
-                                        <small>Price: $270.00</small><br>
-                                        <a href="">Remove</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><input type="number" value="1"></td>
-                            <td>$270.00</td>
-                        </tr>
-                    </table>
-                    <div class="t-price">
-                        <table>
-                            <tr>
-                                <td>Subtotal</td>
-                                <td>$647.00</td>
-                            </tr>
-                            <tr>
-                                <td>Tax</td>
-                                <td>$30.00</td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>$677.00</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <a href="checkout.html" class="btn">Checkout</a>
-                                </td>
-                                <td></td>
-                            </tr>
-                        </table>
+                            </form>
+                            <hr>
+                        </div>
+                        <div class="col-sm-12  mb-4">
+                            <b>3. &nbsp;Payment</b>
+                            <hr>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+            <div class="col-sm-4" class="b-left" style="border-left: 1px solid lightgray;">
+                <h3>Order Summary</h3>
+                <div class="mt-5">
+                    <div class="d-flex justify-content-between">
+                        <span>Merchandise Total:</span>
+                        <span>$123</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between">
+                        <span>Shipping:</span>
+                        <span>FREE</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between">
+                        <span>Estimated Tax:</span>
+                        <span>$12</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between" style="background-color: #e6e4e4;padding: 10px 2px;">
+                        <span>Estimated Total Due:</span>
+                        <span>$135</span>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h3>Shopping Bag</h3>
+                    <hr>
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="./img/img13.webp" alt="">
+                                <div style="text-align: left;">
+                                    <p>5 karet Gold</p>
+                                    <small>QTY: 1</small><br>
+                                    <small>Size: W32 L30</small><br>
+                                    <small>Color: Apricot Orange</small><br>
+                                    <small>Price: $202.00</small><br>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                    
             </div>
         </div>
     </div>
         
-    
-        
-        <!-- ======x====== Cart ======x====== -->
+        <!-- ======x====== Contact ======x====== -->
         
 
         <hr style="margin-top: 120px;">
-<!--=========================
+ <!--=========================
   Start of Footer
-===========================---->
+===========================---->   
     <section id="footer">
       <div class="container-fluid footer-container">
          <div class="container">
